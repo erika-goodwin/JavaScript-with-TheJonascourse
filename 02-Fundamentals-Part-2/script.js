@@ -338,9 +338,6 @@ const percentages = [
 console.log(percentages);
 
 
-
-*/
-
 // L40
 const friends = ['Michael', 'Steven', 'Peter'];
 
@@ -361,3 +358,144 @@ console.log(friends);
 
 friends.shift() //First
 console.log(friends);
+
+
+console.log(friends.indexOf('Steven'));  //1
+console.log(friends.indexOf('Bob'));  //-1
+
+//INCLUDS
+console.log(friends.includes('Steven'));  //True
+console.log(friends.includes('Bob'));  //False
+
+friends.push(23);
+console.log(friends.includes('23')); //False because 23(stlings) =/ 23(number)
+
+if (friends.includes('Peter')) {
+    console.log('You have a friend called Peter.');
+}
+if (friends.includes('Steven')) {
+    console.log('You have a friend called Steven.');
+}
+
+
+// L41 LECTURE
+//1
+const neibours = ['Korian', 'China', 'Rossia'];
+//2
+neibours.push('Utopia');
+console.log(neibours);
+//3
+neibours.pop();
+console.log(neibours);
+//4
+if (neibours.includes('Germany')) {
+
+} else {
+    console.log('Probably not a central European country :D')
+}
+//5
+if (neibours.includes('Korian')) {
+    neibours[neibours.indexOf('Korian')] = 'Noth Korea';
+    console.log(neibours);
+}
+
+
+
+// //L41  CODING CALLENGE #2
+// //1
+// const calcTip = function (value) {
+//     if (value >= 50 && value <= 300) {
+//         const price = value * 1.15;
+//         const tips = value * 0.15;
+//         console.log(price, tips);
+//         return tips;
+//     } else {
+//         const price = value * 1.20;
+//         const tips = value * 0.20;
+//         console.log(price, tips);
+//         return tips;
+//     }
+// }
+// calcTip(100);
+// //2
+// const bills = [125, 555, 44];
+// //3
+// console.log(calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2]));
+// //4
+// const calcPrice = function (value) {
+//     if (value >= 50 && value <= 300) {
+//         const price = value * 1.15;
+//         return price;
+//     } else {
+//         const price = value * 1.20;
+//         return price;
+//     }
+// }
+// console.log(calcPrice(bills[0]), calcPrice(bills[1]), calcPrice(bills[2]));
+
+
+//Teacher Answer
+const calcTip = function (bill) {
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+}
+// const calcTip = bill => bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+const bills = [125, 555, 44];
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+
+console.log(bills, tips, totals);
+
+
+// L42
+const jonasArray = [
+    'Jonas',
+    'Schmedtmann',
+    2037 - 1991,
+    'teacher',
+    ['Micheal', 'Peter', 'Steven']
+];
+//Want to give NAME for each array
+const jonas = {
+    firstName: 'Jonas',
+    lastName: 'Schmedtmann',
+    age: 2037 - 1991,
+    job: 'teacher',
+    friends: ['Micheal', 'Peter', 'Steven']
+};
+
+//LECTURE
+
+const myCountry = {
+    country: 'Japan',
+    capital: 'Tokyo',
+    language: 'Japanese',
+    population: 126.5,
+    neibours: ['China', 'Korea', 'Rossia']
+};
+
+
+
+
+*/
+
+// L43
+const jonas = {
+    firstName: 'Jonas',
+    lastName: 'Schmedtmann',
+    age: 2037 - 1991,
+    job: 'teacher',
+    friends: ['Micheal', 'Peter', 'Steven']
+};
+console.log(jonas);
+
+console.log(jonas.lastName);
+console.log(jonas['lastName']); //can put any expression in the bracket
+//[can put any expression in]
+const nameKey = 'Name';
+console.log(jonas['first' + nameKey]);
+console.log(jonas['last' + nameKey]);
+//CANNOT
+// console.log(jonas.'last' + nameKey);//Unexpected string error
+
+const interestedIn = prompt('What do you want to know about Jonas? Vhoodr between firstName, lastName, age, job, and freinds');
+cnsole.log(jonas.interestedIn);
