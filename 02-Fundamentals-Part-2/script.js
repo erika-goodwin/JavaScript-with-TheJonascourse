@@ -497,5 +497,46 @@ console.log(jonas['last' + nameKey]);
 //CANNOT
 // console.log(jonas.'last' + nameKey);//Unexpected string error
 
-const interestedIn = prompt('What do you want to know about Jonas? Vhoodr between firstName, lastName, age, job, and freinds');
-cnsole.log(jonas.interestedIn);
+
+
+const interestedIn = prompt('What do you want to know about Jonas? Choose between firstName, lastName, age, job, and freinds'); //-> Return string
+console.log(interestedIn);
+console.log(jonas.interestedIn); //undefined
+console.log(jonas[interestedIn]); //teacher
+
+if (jonas[interestedIn]) {
+    console.log(jonas[interestedIn]);
+} else {
+    console.log('Wrong request! Choose between firstName, lastName, age, job, and freinds');
+};
+
+
+
+jonas.location = 'Portugal';
+jonas['twitter'] = '@jonasschmedtman';
+console.log(jonas);
+
+
+// CHALLENGE
+// Jonas has 3 friends, and his best friend is called Micheal. 
+
+//MY ATTEMPT//
+// console.log(`${jonas.firstName} has ${jonas[friends.length]} friends, and his best friend is called ${jonas[friends[0]]}.`);
+
+//TEACHER ANNSER//
+console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}.`);
+
+//LECTURE
+//1
+const myCountry = {
+    country: 'Japan',
+    capital: 'Tokyo',
+    language: 'Japanese',
+    population: 126.5,
+    neibours: ['China', 'Korea', 'Rossia']
+};
+
+console.log(`${myCountry.firstName} has ${myCountry.population} million ${myCountry.language}-speaking people, ${myCountry.neibours.length} neighbouring countries and a capital called ${myCountry.capital}.`);
+
+//2
+myCountry.
