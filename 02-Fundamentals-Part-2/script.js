@@ -473,11 +473,6 @@ const myCountry = {
     neibours: ['China', 'Korea', 'Rossia']
 };
 
-
-
-
-*/
-
 // L43
 const jonas = {
     firstName: 'Jonas',
@@ -518,7 +513,7 @@ console.log(jonas);
 
 
 // CHALLENGE
-// Jonas has 3 friends, and his best friend is called Micheal. 
+// Jonas has 3 friends, and his best friend is called Micheal.
 
 //MY ATTEMPT//
 // console.log(`${jonas.firstName} has ${jonas[friends.length]} friends, and his best friend is called ${jonas[friends[0]]}.`);
@@ -539,4 +534,80 @@ const myCountry = {
 console.log(`${myCountry.firstName} has ${myCountry.population} million ${myCountry.language}-speaking people, ${myCountry.neibours.length} neighbouring countries and a capital called ${myCountry.capital}.`);
 
 //2
-myCountry.
+myCountry.population += 2;
+console.log(myCountry.population);
+
+
+//L44
+const jonas = {
+    firstName: 'Jonas',
+    lastName: 'Schmedtmann',
+    birthYear: 1991,
+    job: 'teacher', //STRING VALUE
+    friends: ['Micheal', 'Peter', 'Steven'], //ARRAY VALUE
+    hasDriversLicense: true, //BOOLEAN VALUE
+    // //METHOD1
+    // calcAge: function (birthYear) {  //DIFFERENCE: = or :  //FUNCTION VALUE
+    //     return 2037 - birthYear;
+    // }
+
+    // //METHOD2
+    // calcAge: function () {
+    //     console.log(this);
+    //     return 2037 - this.birthYear;
+    // }
+
+    //METHOD3
+    calcAge: function () {
+        this.age = 2037 - this.birthYear;
+        return this.age;
+    },
+
+    //CHALLENGE
+    getSummary: function () {
+        return `${this.firstName} is a ${this.calcAge()}-years old ${jonas.job}, and he has ${this.hasDriversLicense ? 'a' : 'no'} driver's license.`
+    }
+};
+
+// console.log(jonas.calcAge(1991));
+// console.log(jonas['calcAge'](1991));
+
+console.log(jonas.calcAge());
+
+console.log(jonas.age);
+console.log(jonas.age);
+console.log(jonas.age);
+
+//CHALLENGE
+//'JOnas is a 46-yeats old teacher, and he has a/no driver's License'
+console.log(`Jonas is a ${jonas.age}-years old ${jonas.job}, and he has ${jonas.hasDriversLicense = true ? 'a' : 'no'} driver's license.`);
+//ANSWER
+console.log(jonas.getSummary());
+
+//LECTURE
+
+//1
+const myCountry = {
+    country: 'Japan',
+    capital: 'Tokyo',
+    language: 'Japanese',
+    population: 126.5,
+    neibours: ['China', 'Korea', 'Rossia'],
+    describe: function () {
+        return `${this.firstName} has ${this.population} million ${this.language}-speaking people, ${this.neibours.length} neighbouring countries and a capital called ${this.capital}.`
+    },
+    checkIsland: function () {
+        this.isIsland = this.neibours.length;
+        return this.isIsland === 0 ? 'true' : 'false';
+    }
+};
+//2
+console.log(myCountry.describe());
+//3
+myCountry.checkIsland();
+console.log(myCountry);
+
+
+
+*/
+
