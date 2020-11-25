@@ -608,9 +608,6 @@ myCountry.checkIsland();
 console.log(myCountry);
 
 
-
-*/
-
 //L45 CODING CHALLENGE
 
 //1
@@ -649,6 +646,34 @@ console.log(mark.bmi, john.bmi);
 
 if (mark.bmi > john.bmi) {
     console.log(`${john.fullName}'s BMI (${john.calcBmi()}) is higher than ${mark.fullName}’s (${mark.calcBmi()})`);
-} else {
+} else if (john.bmi > mark.bim) {
     console.log(`${mark.fullName}'s BMI (${mark.calcBmi()}) is higher than ${john.fullName}’s (${john.calcBmi()})`);
 };
+
+//L46
+// console.log('Lifting weights reptation 1 😛');
+// console.log('Lifting weights reptation 2 😛');
+// console.log('Lifting weights reptation 3 😛');
+// console.log('Lifting weights reptation 4 😛');
+// console.log('Lifting weights reptation 5 😛');
+// console.log('Lifting weights reptation 6 😛');
+// console.log('Lifting weights reptation 7 😛');
+// console.log('Lifting weights reptation 8 😛');
+// console.log('Lifting weights reptation 9 😛');
+// console.log('Lifting weights reptation 10 😛');
+
+//for loop keeps running while ondition is TRUE
+for (let rep = 1; rep <= 10; rep++) {   //rep = rep + 1 = rep++
+    console.log(`Lifting weights reptation ${rep} 😛`);
+}
+
+//LECTURE
+for (let vote = 1; vote <= 50; vote++) {
+    console.log(`Voter number ${vote} is currently voting`);
+}
+
+
+
+
+
+*/
