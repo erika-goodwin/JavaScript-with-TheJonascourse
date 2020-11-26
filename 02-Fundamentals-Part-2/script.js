@@ -672,8 +672,34 @@ for (let vote = 1; vote <= 50; vote++) {
     console.log(`Voter number ${vote} is currently voting`);
 }
 
-
-
-
-
 */
+
+// L47
+const jonas = [
+    'Jonas',
+    'Schmedtmann',
+    2037 - 1991,
+    'teacher',
+    ['Micheal', 'Peter', 'Steven'],
+    true
+];
+
+// console.log(jonas[0])
+// console.log(jonas[1])
+// ...
+// console.log(jonas[4])
+// jonas[5] doesn NOT exist
+
+
+
+for (let i = 0; i < 5; i++) {
+    console.log(jonas[i]);
+};
+
+//5 should input by javaScript
+for (let i = 0; i < jonas.length; i++) {
+    console.log(jonas[i], typeof jonas[i]);
+};
+//method is 'object'
+
+
