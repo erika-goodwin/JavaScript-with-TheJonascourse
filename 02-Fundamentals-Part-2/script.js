@@ -683,6 +683,7 @@ const jonas = [
     ['Micheal', 'Peter', 'Steven'],
     true
 ];
+const types = [];
 
 // console.log(jonas[0])
 // console.log(jonas[1])
@@ -692,14 +693,69 @@ const jonas = [
 
 
 
-for (let i = 0; i < 5; i++) {
-    console.log(jonas[i]);
-};
+// for (let i = 0; i < 5; i++) {
+//     console.log(jonas[i]);
+// };
 
-//5 should input by javaScript
-for (let i = 0; i < jonas.length; i++) {
-    console.log(jonas[i], typeof jonas[i]);
-};
+// //5 should input by javaScript
+// for (let i = 0; i < jonas.length; i++) {
+//     console.log(jonas[i], typeof jonas[i]);
+// };
+
 //method is 'object'
+for (let i = 0; i < jonas.length; i++) {
+    //Reading from jonas array
+    console.log(jonas[i], typeof jonas[i]);
 
+    // //Filling types array
+    // types[i] = typeof jonas[i];
+
+    types.push(typeof jonas[i]);
+};
+console.log(types);
+
+
+//Calculate ages
+const years = [1991, 2007, 1969, 2020];
+const ages = [];
+
+for (let i = 0; i < years.length; i++) {
+    ages.push(2037 - years[i]);
+}
+console.log(ages);
+
+
+// continue and break
+console.log('-----ONLY STRINGS -----')
+for (let i = 0; i < jonas.length; i++) {
+    if (typeof jonas[i] !== 'string') continue;
+
+    //Reading from jonas array
+    console.log(jonas[i], typeof jonas[i]);
+
+};
+console.log(types);
+
+
+//break
+console.log('-----BREAK WITH NUMBER -----')
+for (let i = 0; i < jonas.length; i++) {
+    if (typeof jonas[i] == 'number') break;
+
+    //Reading from jonas array
+    console.log(jonas[i], typeof jonas[i]);
+
+};
+
+//LECTURE
+//1
+const populations = [328.2, 1441, 126.5, 37.59];
+//2
+const percentagaeOfWorld2 = [];
+for (let i = 0; i < populations.length; i++) {
+    percentagaeOfWorld2.push[populations[i] / 7900 * 100];
+    console.log(populations[i]);
+}
+console.log(percentagaeOfWorld2);
+//3
 
