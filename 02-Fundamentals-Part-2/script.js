@@ -672,7 +672,6 @@ for (let vote = 1; vote <= 50; vote++) {
     console.log(`Voter number ${vote} is currently voting`);
 }
 
-*/
 
 // L47
 const jonas = [
@@ -751,11 +750,14 @@ for (let i = 0; i < jonas.length; i++) {
 //1
 const populations = [328.2, 1441, 126.5, 37.59];
 //2
-const percentagaeOfWorld2 = [];
+const percentages2 = [];
 for (let i = 0; i < populations.length; i++) {
-    percentagaeOfWorld2.push[populations[i] / 7900 * 100];
-    console.log(populations[i]);
+    percentages2.push(populations[i] / 7900 * 100);
 }
-console.log(percentagaeOfWorld2);
+console.log(percentages2);
 //3
+//yes!!
 
+*/
+
+// L48
