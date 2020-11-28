@@ -758,8 +758,6 @@ console.log(percentages2);
 //3
 //yes!!
 
-*/
-
 // L48
 const jonas = [
     'Jonas',
@@ -799,3 +797,40 @@ for (let i = 0; i < listOfNeighbours.length; i++) {
         console.log(`Neighbour${i}-${y}: ${listOfNeighbours[i][y]}`);
     }
 };
+
+
+// L49
+for (let rep = 1; rep <= 10; rep++) {   //rep = rep + 1 = rep++
+    console.log(`Lifting weights reptation ${rep} 😛`);
+}
+
+//the While loop
+//run the loop WHILE the condition is true
+let rep = 1;
+while (rep <= 10) {
+    console.log(`Lifting weights reptation ${rep} 😛`);
+    rep++;
+}
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+console.log(dice);
+
+while (dice !== 6) {
+    console.log(`You rolled a ${dice}`);
+    dice = Math.trunc(Math.random() * 6) + 1;
+    if (dice === 6) console.log('Looop os about to end...');
+}
+
+//LECTURE
+//1
+const populations = [328.2, 1441, 126.5, 37.59];
+const population3 = [];
+let i = 0;
+while (i < populations.length) {
+    population3.push(populations[i] / 7900 * 100);
+    i++;
+}
+console.log(population3);
+
+
+*/
