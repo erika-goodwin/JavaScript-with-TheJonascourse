@@ -784,3 +784,18 @@ for (let exercise = 1; exercise < 4; exercise++) {
         console.log(`Exercise${exercise}: LIFTING WEIGHT REPETION ${rep}`)
     }
 };
+
+//LECTURE
+//1
+const listOfNeighbours = [
+    ['Canada', 'Mexico'],
+    ['Spain'],
+    ['Norway', 'Sweden', 'Russia']
+];
+//2
+for (let i = 0; i < listOfNeighbours.length; i++) {
+    console.log(`--${i}---`)
+    for (let y = 0; y < listOfNeighbours[i].length; y++) {
+        console.log(`Neighbour${i}-${y}: ${listOfNeighbours[i][y]}`);
+    }
+};
