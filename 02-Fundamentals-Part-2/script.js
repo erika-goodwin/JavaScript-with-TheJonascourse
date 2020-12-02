@@ -834,3 +834,34 @@ console.log(population3);
 
 
 */
+
+//L50 CODING CHALLENGE #4
+//1
+const calcTip = function (bill) {
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+}
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+//2
+let tips = [];
+let totals = [];
+//3
+for (let i = 0; i < bills.length; i++) {
+    const tip = calcTip(bills[i]);
+    totals.push(tip);
+    tips.push(tip + bills[i]);
+}
+console.log(tips);
+console.log(totals);
+
+//Bounus
+
+const calcAverage = function (arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i] //sum = sum + arr[i];
+    }
+    return sum / arr.length;
+}
+console.log(calcAverage([2, 3, 7]));
+console.log(calcAverage(totals));
+console.log(calcAverage(tips));
