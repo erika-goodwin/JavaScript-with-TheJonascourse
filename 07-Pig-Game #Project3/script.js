@@ -19,11 +19,35 @@ const btnNew = document.querySelector('.btn--new');
 const btnRoll = document.querySelector('.btn--roll');
 const btnHold = document.querySelector('.btn--hold');
 
-//SWITCHING THE ACTIVE PLAYER L84
-const scores = [0, 0];
-let currentScore = 0;
-let activePlayer = 0;
-let playing = true; //L85
+let scores, currentScore, activePlayer, playing;
+
+//MAde repeatable function for initiate the game (reset)
+const init = function () {
+  //SWITCHING THE ACTIVE PLAYER L84
+  scores = [0, 0];
+  currentScore = 0;
+  activePlayer = 0;
+  playing = true; //L85
+
+  //1.current number -> 0
+  current0El.textContent = 0;
+  current1El.textContent = 0;
+  //2. Score reset
+  score0El.textContent = 0;
+  score1El.textContent = 0;
+  //3. Hide the dice pic
+  diceEl.classList.add('hidden');
+
+  //4. player number -> 0
+  player0El.classList.add('player-active');
+  player1El.classList.remove('player-active');
+
+  //5. background -> normal
+  player0El.classList.remove('player-winner');
+  player1El.classList.remove('player-winner');
+};
+//Run the function ↑↑↑↑↑↑↑
+init();
 
 //Made repeatable function from existed code L85
 const switchPlayer = function () {
@@ -34,13 +58,6 @@ const switchPlayer = function () {
   player0El.classList.toggle('player--active');
   player1El.classList.toggle('player--active');
 };
-
-//STARING CONDITION L82
-//Score reset
-score0El.textContent = 0;
-score1El.textContent = 0;
-//Hide the dice pic
-diceEl.classList.add('hidden');
 
 // ROLLING THE DICE functionality L83
 btnRoll.addEventListener('click', function () {
@@ -57,9 +74,8 @@ btnRoll.addEventListener('click', function () {
     if (dice !== 1) {
       //Add dice to current score
       currentScore += dice;
-      document.getElementById(
-        `current--${activePlayer}`
-      ).textContent = currentScore;
+      document.getElementById(`current--${activePlayer}`).textContent =
+        currentScore;
 
       // current0El.textContent = currentScore; //Change later
       // console.log(currentScore);
@@ -99,3 +115,6 @@ btnHold.addEventListener('click', function () {
     }
   }
 });
+
+// RESETTING THE GAME L86
+btnNew.addEventListener('click', init);
